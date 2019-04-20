@@ -1,0 +1,39 @@
+{
+	"name": "ArticleLikes",
+	"author": [
+		"Your Name"
+	],
+	"url": "",
+	"descriptionmsg": "",
+	"license-name": "GPL-2.0-or-later",
+	"type": "other",
+	"requires": {
+	},
+
+	"AutoloadClasses": {
+		"MediaWiki\\Extension\\ArticleLikes\\Hooks": "Hooks.php",
+		"MediaWiki\\Extension\\ArticleLikes": "LikeArticle.php"
+	},
+	"Hooks": {
+		"ArticleViewHeader": "MediaWiki\\Extension\\ArticleLikes\\Hooks::onArticleViewHeader",
+		"BeforePageDisplay": "MediaWiki\\Extension\\ArticleLikes\\Hooks::onBeforePageDisplay"
+	},
+	"MessagesDirs": {
+		"ArticleLikes": [
+			"i18n"
+		]
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "modules",
+		"remoteExtPath": "ArticleLikes/modules"
+	},
+	"ResourceModules": {
+		"articleUpvote": {
+			"dependencies": [],
+			"messages": [],
+			"styles": ["articleUpvote.less"],
+			"scripts": []
+		}
+	},
+	"manifest_version": 2
+}
